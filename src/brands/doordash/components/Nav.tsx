@@ -22,6 +22,7 @@ const Navbar = () => {
         }
     }, [activeDropdown])
 
+    
     const handleDropdownClick = (e: React.MouseEvent, title: string) => {
         e.stopPropagation();
         setActiveDropdown(activeDropdown === title ? null : title)
@@ -29,7 +30,7 @@ const Navbar = () => {
 
     return (
         <header className="w-full z-10 py-5">
-            <nav className="flex justify-between items-center">
+            <nav className="flex justify-between items-center mx-4">
                 <a href="/" className='flex lg:space-x-1 items-center text-[#eb1700]'>
                     <svg aria-hidden="true" width="32" height="18" viewBox="0 0 99.5 56.5" fill="var(--base-color-red-60)" className='text-[#eb1700]'>
                         <path d="M95.64,13.38A25.24,25.24,0,0,0,73.27,0H2.43A2.44,2.44,0,0,0,.72,4.16L16.15,19.68a7.26,7.26,0,0,0,5.15,2.14H71.24a6.44,6.44,0,1,1,.13,12.88H36.94a2.44,2.44,0,0,0-1.72,4.16L50.66,54.39a7.25,7.25,0,0,0,5.15,2.14H71.38c20.26,0,35.58-21.66,24.26-43.16">
@@ -51,15 +52,23 @@ const Navbar = () => {
                             {/* dropdown menu */}
                             <div 
                                 className={`
-                                    dropdown absolute z-20 bg-gray-200 divide-y divide-gray-100 rounded-lg shadow-sm w-44
+                                    dropdown absolute z-10  bg-white divide-y  divide-gray-300 rounded-lg shadow-lg min-w-44  w-full max-w-[400px]
                                     ${activeDropdown === link.title ? "block" : "hidden"}
                                 `}
                                 ref={dropdownRef}
                             >
-                                <ul className='py-2 text-sm pt-2 pl-4'>
+                                <ul className='font-semibold'>
                                     {link.links.map((link) => (
-                                        <li key={link.name}>
-                                            <a href={link.link}>{link.name}</a>
+                                        <li 
+                                            key={link.name}
+                                            className='mt-1 mb-1'
+                                        >
+                                            <a 
+                                                href={link.link}
+                                                className='block px-4 py-2 text-red-400 hover:bg-red-100 hover:text-black'
+                                            >
+                                                {link.name}
+                                            </a>
                                         </li>
                                     ))}
                                 </ul>
