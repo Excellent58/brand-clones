@@ -29,7 +29,7 @@ const Navbar = () => {
     }
 
     return (
-        <header className="w-full z-10 py-4">
+        <header className="w-full z-10 py-4 px-2">
             <nav className="flex justify-between items-center mx-4">
                 <a href="/" className='flex lg:space-x-1 items-center text-[#eb1700]'>
                     <svg aria-hidden="true" width="32" height="18" viewBox="0 0 99.5 56.5" fill="var(--base-color-red-60)" className='text-[#eb1700]'>
@@ -39,11 +39,11 @@ const Navbar = () => {
                     <span className='hidden lg:block text-lg font-bold text-red-400'>Dasher Central</span>
                 </a>
 
-                <ul className='flex space-x-5 items-center'>
+                <ul className='flex gap-x-6 items-center'>
                     {navLinks.map(( link ) => (
                         <li key={link.title} className='relative'>
                             <button 
-                                className='flex items-center  cursor-pointer'
+                                className='flex items-center cursor-pointer'
                                 onClick={(e)=> handleDropdownClick(e, link.title)}
                             >
                                 <span className='text-lg text-bold'>{link.title}</span>
@@ -77,7 +77,7 @@ const Navbar = () => {
                     ))}
                 </ul>
 
-                <div className="flex space-x-4 items-center">
+                <div className="flex gap-x-3 items-center">
                     <button className='cursor-pointer'>
                         <span className='sr-only'>search</span>
                         <Search/>
