@@ -1,5 +1,7 @@
 import Navbar from "./components/Nav"
 import HeroIMg from "./assets/hero-img.jpg"
+import DoorDashImg from "./assets/doordash-0.jpg"
+
 import { MapPin } from "lucide-react"
 
 const DoorDash = () => {
@@ -121,9 +123,37 @@ const DoorDash = () => {
             *subject to availability and eligibility, approval and activation of the DoorDash Crimson Visa® Debit Card to get paid instantly.
           </div>
 
-          <section>
-            <div>
-              
+          <section className="pt-16">
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 gap-[24px] px-2"
+            >
+              <div>
+                <img 
+                  src={DoorDashImg}
+                  alt="" 
+                  width="1208" 
+                  height="1080"
+                />
+              </div>
+
+              <div className="flex flex-col items-center bg-[#ffe0dbff]">
+                <h2
+                  className="font-bold text-xl"
+                >
+                  Dash with confidence
+                </h2>
+                <div className="flex items-center">
+                  <p className="pt-2">
+                    Peace of mind while dashing is essential. 
+                    That includes knowing that you can easily get help when you need it. 
+                    And while we hope every delivery goes smoothly, we’ve got your back if things don’t go as planned. That’s why we built our safety toolkit — to make getting on the road even safer for Dashers.
+                  </p>
+                </div>
+
+                <div>
+                  <a href="#" className="bg-red-500 py-3 px-3 rounded-full text-white text-lg font-semibold">Learn More</a>
+                </div>
+              </div>
             </div>
           </section>
         </div>
