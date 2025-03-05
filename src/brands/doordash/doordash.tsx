@@ -123,20 +123,22 @@ const DoorDash = () => {
             *subject to availability and eligibility, approval and activation of the DoorDash Crimson Visa® Debit Card to get paid instantly.
           </div>
 
-          <section className="pt-16">
+          <section className="pt-16 w-full">
             <div
-              className="grid grid-cols-1 md:grid-cols-2 gap-[24px] px-2"
+              className="grid grid-cols-1 md:grid-cols-2 gap-y-[24px] md:gap-x-[24px] w-full"
             >
-              <div>
+
+              <div className="flex w-full md:clip-container pl-2">
                 <img 
                   src={DoorDashImg}
                   alt="" 
                   width="1208" 
                   height="1080"
+                  className="object-cover w-full h-full md:rounded-r-xl"
                 />
               </div>
 
-              <div className="flex flex-col items-center bg-[#ffe0dbff]">
+              <div className="flex flex-col items-center md:justify-center bg-gradient-to-r from-[#fff7f5ff] to-[#ffe0dbff]">
                 <h2
                   className="font-bold text-xl"
                 >
@@ -150,10 +152,11 @@ const DoorDash = () => {
                   </p>
                 </div>
 
-                <div>
+                <div className="pt-10">
                   <a href="#" className="bg-red-500 py-3 px-3 rounded-full text-white text-lg font-semibold">Learn More</a>
                 </div>
               </div>
+              
             </div>
           </section>
         </div>
